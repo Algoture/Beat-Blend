@@ -51,8 +51,7 @@ function visualizer() {
     analyser.fftSize = 128;
     const bufferLength = analyser.frequencyBinCount;
     const dataArray = new Uint8Array(bufferLength);
-    const audioElement2 = audioElement;
-    const source = audioContext.createMediaElementSource(audioElement2);
+    const source = audioContext.createMediaElementSource(audioElement);
     source.connect(analyser);
     analyser.connect(audioContext.destination);
     const ctx = canvas.getContext('2d');
