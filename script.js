@@ -42,6 +42,7 @@ let songs = [
     { songName: "Khalasi", filePath: "Songs/Khalasi.mp3", coverPath: "https://c.saavncdn.com/140/Khalasi-Coke-Studio-Bharat-Gujarati-2023-20230703053409-500x500.jpg" },
     { songName: "So Baby", filePath: "Songs/So Baby From Doctor.mp3", coverPath: "https://c.saavncdn.com/312/Doctor-Tamil-2021-20211005133149-500x500.jpg" },
     { songName: "Holi Re Rasiya", filePath: "Songs/Holi Re.mp3", coverPath: "https://c.saavncdn.com/750/Holi-Re-Rasiya-Hindi-2023-20230219053212-500x500.jpg" },
+    { songName: "Jamal Kudu", filePath: "Songs/Jamal Kudu.mp3", coverPath: "https://c.saavncdn.com/624/Abrar-s-Entry-Jamal-Kudu-From-ANIMAL-Hindi-2023-20231206121002-500x500.jpg" },
 ]
 
 function visualizer() {
@@ -105,7 +106,7 @@ function progressBarValue() {
 }
 
 next.addEventListener('click', function () {
-    if (songIndex >= 30) {
+    if (songIndex >= 31) {
         songIndex = -1;
     }
     songIndex++;
@@ -116,7 +117,7 @@ next.addEventListener('click', function () {
 
 previous.addEventListener('click', () => {
     if (songIndex <= 0) {
-        songIndex = 31;
+        songIndex = 32;
     }
     songIndex--;
     updateUI();
@@ -131,7 +132,7 @@ audioElement.addEventListener('timeupdate', () => {
     document.querySelector(".duration").innerHTML = `${secondsToMinutesAndSeconds(audioElement.duration)}`;
 });
 
-document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 play.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
