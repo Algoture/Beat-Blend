@@ -1,4 +1,4 @@
-// Declarations and Function Calls :
+// Declarations
 let previous = document.getElementById("previous");
 let play = document.getElementById("play");
 let next = document.getElementById("next");
@@ -10,8 +10,6 @@ let songIndex = 0;
 let canvas = document.getElementById('visualizer');
 canvas.width = document.querySelector('.box').clientWidth;
 progressBar.value = 0;
-updateUI();
-visualizer();
 
 //Songs Data
 let songs = [
@@ -90,6 +88,7 @@ function updateUI() {
     audioElement.src = songs[songIndex].filePath;
     named.textContent = songs[songIndex].songName;
 }
+updateUI();
 
 function playNextSong() {
     songIndex++;
@@ -139,6 +138,7 @@ play.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
         play.src = "pause.png";
         audioElement.play();
+        visualizer();
     } else {
         play.src = "play.png";
         audioElement.pause();
