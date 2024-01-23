@@ -1,4 +1,4 @@
-// Declarations :
+// Declarations and Function Calls :
 let previous = document.getElementById("previous");
 let play = document.getElementById("play");
 let next = document.getElementById("next");
@@ -9,7 +9,11 @@ let named = document.getElementById("songName");
 let songIndex = 0;
 let canvas = document.getElementById('visualizer');
 canvas.width = document.querySelector('.box').clientWidth;
+progressBar.value = 0;
+updateUI();
+visualizer();
 
+//Songs Data
 let songs = [
     { songName: "Aathma Raama", filePath: "Songs/Aathma Raama.mp3", coverPath: "https://c.saavncdn.com/445/Aathma-Raama-Tamil-2022-20220401124604-500x500.jpg" },
     { songName: "Aigiri Nandini", filePath: "Songs/Aigiri Nandini (Brodha V).mp3", coverPath: "https://c.saavncdn.com/206/Aigiri-Nandini-Tamil-2022-20220401094056-500x500.jpg" },
@@ -80,20 +84,18 @@ function secondsToMinutesAndSeconds(seconds) {
     var formattedTime = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
     return formattedTime;
 }
-progressBar.value = 0;
+
 function updateUI() {
     albumImg.src = songs[songIndex].coverPath;
     audioElement.src = songs[songIndex].filePath;
     named.textContent = songs[songIndex].songName;
 }
-updateUI();
 
 function playNextSong() {
     songIndex++;
     updateUI();
     audioElement.src = songs[songIndex].filePath;
     audioElement.play();
-    visualizer();
 }
 
 audioElement.addEventListener('ended', () => {
@@ -112,7 +114,6 @@ next.addEventListener('click', function () {
     updateUI();
     audioElement.play();
     play.src = 'pause.png';
-    visualizer();
 });
 
 previous.addEventListener('click', () => {
@@ -123,7 +124,6 @@ previous.addEventListener('click', () => {
     updateUI();
     audioElement.play();
     play.src = 'pause.png';
-    visualizer();
 });
 
 audioElement.addEventListener('timeupdate', () => {
@@ -139,7 +139,6 @@ play.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
         play.src = "pause.png";
         audioElement.play();
-        visualizer();
     } else {
         play.src = "play.png";
         audioElement.pause();
@@ -156,7 +155,6 @@ document.addEventListener('keydown', function (event) {
         if (audioElement.currentTime === 0 || audioElement.paused) {
             audioElement.play();
             play.src = "pause.png";
-            visualizer();
         } else {
             audioElement.pause();
             play.src = "play.png";
