@@ -113,6 +113,7 @@ next.addEventListener('click', function () {
     updateUI();
     audioElement.play();
     play.src = 'pause.png';
+    visualizer();
 });
 
 previous.addEventListener('click', () => {
@@ -123,6 +124,7 @@ previous.addEventListener('click', () => {
     updateUI();
     audioElement.play();
     play.src = 'pause.png';
+    visualizer();
 });
 
 audioElement.addEventListener('timeupdate', () => {
@@ -132,7 +134,7 @@ audioElement.addEventListener('timeupdate', () => {
     document.querySelector(".duration").innerHTML = `${secondsToMinutesAndSeconds(audioElement.duration)}`;
 });
 
-// document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 play.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
