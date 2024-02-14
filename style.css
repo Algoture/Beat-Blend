@@ -74,7 +74,7 @@ body {
   align-items: center;
   gap: 1rem;
   clip-path: circle(30px at calc(100% - 2.6rem) 36px);
-  transition: 0.3s all ease;
+  transition: 1s all ease;
 }
 
 .active {
