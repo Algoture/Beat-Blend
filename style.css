@@ -32,6 +32,11 @@ body {
   border-radius: 10px;
   transition: all 0.3s ease;
 }
+#hamburger:hover .bar{
+  background-color: #0077b6;
+  transition: all 0.3s ease;
+
+}
 .positive {
   transform: translateY(10px) rotate(45deg);
 }
