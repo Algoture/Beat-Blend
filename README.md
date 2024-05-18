@@ -5,6 +5,7 @@ Welcome to Beat Blend – your go-to music player for a clean, sleek listening e
 
 **Features**
 **Minimal and Sleek UI**: Navigate effortlessly with our intuitive design.
+
 **Music Visualizer**: Enjoy dynamic visuals that sync with your tunes.
 
 
