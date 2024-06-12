@@ -136,6 +136,11 @@ let songs = [
       "https://c.saavncdn.com/126/Shape-of-You-English-2017-500x500.jpg",
   },
   {
+    songName:"Paon Ki Jutti",
+    filePath:"Songs/Paon Ki Jutti.mp3",
+    coverPath:"https://c.saavncdn.com/143/Pyaar-Ka-Badla-Punjabi-2024-20240530151725-500x500.jpg",
+  },
+  {
     songName: "Take It",
     filePath: "Songs/Take It.mp3",
     coverPath: "https://c.saavncdn.com/246/Take-It-English-2017-500x500.jpg",
