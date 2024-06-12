@@ -283,7 +283,7 @@ function progressBarValue() {
 }
 
 next.addEventListener("click", function () {
-  if (songIndex >= 31) {
+  if (songIndex >= 32) {
     songIndex = -1;
   }
   songIndex++;
@@ -294,7 +294,7 @@ next.addEventListener("click", function () {
 
 previous.addEventListener("click", () => {
   if (songIndex <= 0) {
-    songIndex = 32;
+    songIndex = 33;
   }
   songIndex--;
   updateUI();
