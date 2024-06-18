@@ -1,3 +1,6 @@
+:root{
+  --accent:#f4ce14;
+}
 * {
   margin: 0;
   padding: 0;
@@ -38,13 +41,13 @@ body {
 
 }
 .positive {
-  transform: translateY(10px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
 }
 .negative {
-  transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 .nothing {
-  transform: rotate(315deg);
+  transform: translateX(-300px) rotate(360deg);
 }
 
 .new {
@@ -84,7 +87,7 @@ body {
 
 .active {
   clip-path: circle(100%);
-  background-color: #f4ce14;
+  background-color: var(--accent);
 }
 main {
   width: 100%;
@@ -192,7 +195,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -8px;
-  background-color: #f4ce14;
+  background-color: var(--accent);
   height: 1.5rem;
   width: 1rem;
   border-radius: 0.5rem;
