@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Enjoy a seamless music experience with Beat Blend. A music Player with Relish minimal design and with beautiful visualizers."
+    />
     <title>Beat Blend</title>
     <link rel="shortcut icon" type="image" href="Logo.png" />
-    <link rel='stylesheet' href='style.css'>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main>
-        <div id="hamburger" onclick="ham()">
-            <div class="bar" id="bar1"></div>
-            <div class="bar" id="bar2"></div>
-            <div class="bar" id="bar3"></div>
+      <div id="hamburger" onclick="ham()">
+        <div class="bar" id="bar1"></div>
+        <div class="bar" id="bar2"></div>
+        <div class="bar" id="bar3"></div>
+      </div>
+      <div class="page" id="hampage">
+        <div class="new">
+          <img src="Logo.png" alt="" srcset="" />
+          <p>This is Best</p>
         </div>
-        <div class="page" id="hampage">
-            <div class="new"><img src="Logo.png" alt="" srcset=""><p>This is Best </p></div>
-            <div class="new"><img src="Logo.png" alt="" srcset=""><p>This is Best </p></div>
-            <div class="new"><img src="Logo.png" alt="" srcset=""><p>This is Best </p></div>
-            <div class="new"><img src="Logo.png" alt="" srcset=""><p>This is Best </p></div>
+        <div class="new">
+          <img src="Logo.png" alt="" srcset="" />
+          <p>This is Best</p>
         </div>
-        <div class="box">
-            <div class="cover">
-                <img src="" alt="" id="album">
-            </div>
-            <div id="name">
-                <p id="songName"></p>
-            </div>
-            <div id="progressBar">
-                <input type="range" id="pBar" min="0" max="100" value="10">
-            </div>
-            <div class="songInfo">
-                <div class="playedTime"></div>
-                <div class="duration"></div>
-            </div>
-            <div class="controls">
-                <img id="previous" src="previous.png" alt="">
-                <img id="play" src="play.png" alt="">
-                <img id="next" src="next.png" alt="">
-            </div>
-            <canvas id="visualizer"></canvas>
+        <div class="new">
+          <img src="Logo.png" alt="" srcset="" />
+          <p>This is Best</p>
         </div>
+        <div class="new">
+          <img src="Logo.png" alt="" srcset="" />
+          <p>This is Best</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="cover">
+          <img src="" alt="" id="album" />
+        </div>
+        <div id="name">
+          <p id="songName"></p>
+        </div>
+        <div id="progressBar">
+          <input type="range" id="pBar" min="0" max="100" value="10" />
+        </div>
+        <div class="songInfo">
+          <div class="playedTime"></div>
+          <div class="duration"></div>
+        </div>
+        <div class="controls">
+          <img id="previous" src="previous.png" alt="" />
+          <img id="play" src="play.png" alt="" />
+          <img id="next" src="next.png" alt="" />
+        </div>
+        <canvas id="visualizer"></canvas>
+      </div>
     </main>
-    <script src='script.js'></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
