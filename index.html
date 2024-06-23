@@ -44,10 +44,21 @@
           <p id="songName"></p>
         </div>
         <div id="progressBarDiv">
-          <input type="range" id="progressBar" min="0" max="100" value="10" />
+          <input
+            type="range"
+            id="progressBar"
+            min="0"
+            max="100"
+            value="10"
+            role="slider"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+            aria-label="Playback position"
+          />
         </div>
         <div class="songInfo">
-          <div class="playedTime"></div>
+          <div class="currentTime"></div>
           <div class="duration"></div>
         </div>
         <div class="controls">

@@ -144,7 +144,7 @@ main {
   justify-content: space-between;
 }
 
-.playedTime,
+.currentTime,
 .duration {
   margin: 0 2.5rem;
   position: relative;

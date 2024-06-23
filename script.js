@@ -305,8 +305,9 @@ previous.addEventListener("click", () => {
 audioElement.addEventListener("timeupdate", () => {
   progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
   progressBar.value = progress;
+  progressBar.setAttribute("aria-valuenow", progress);
   document.querySelector(
-    ".playedTime"
+    ".currentTime"
   ).innerHTML = `${secondsToMinutesAndSeconds(audioElement.currentTime)}`;
   document.querySelector(".duration").innerHTML = `${secondsToMinutesAndSeconds(
     audioElement.duration
