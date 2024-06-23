@@ -130,7 +130,7 @@ main {
   border-radius: 25px;
   box-shadow: 20px 20px 80px #00000056, inset -20px -20px 60px #cfd9df;
 }
-#progressBar {
+#progressBarDiv {
   display: flex;
   justify-content: center;
   align-items: center;

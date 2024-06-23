@@ -2,7 +2,7 @@
 let previous = document.getElementById("previous");
 let play = document.getElementById("play");
 let next = document.getElementById("next");
-let progressBar = document.getElementById("pBar");
+let progressBar = document.getElementById("progressBar");
 let audioElement = new Audio("Songs/Aathma Raama.mp3");
 let albumImg = document.getElementById("album");
 let named = document.getElementById("songName");
@@ -136,9 +136,10 @@ let songs = [
       "https://c.saavncdn.com/126/Shape-of-You-English-2017-500x500.jpg",
   },
   {
-    songName:"Paon Ki Jutti",
-    filePath:"Songs/Paon Ki Jutti.mp3",
-    coverPath:"https://c.saavncdn.com/143/Pyaar-Ka-Badla-Punjabi-2024-20240530151725-500x500.jpg",
+    songName: "Paon Ki Jutti",
+    filePath: "Songs/Paon Ki Jutti.mp3",
+    coverPath:
+      "https://c.saavncdn.com/143/Pyaar-Ka-Badla-Punjabi-2024-20240530151725-500x500.jpg",
   },
   {
     songName: "Take It",
@@ -237,13 +238,12 @@ function visualizer() {
   renderFrame();
 }
 
-function ham(){
+function ham() {
   bar1.classList.toggle("positive");
   bar2.classList.toggle("nothing");
   bar3.classList.toggle("negative");
   page.classList.toggle("active");
-}  
-
+}
 
 function secondsToMinutesAndSeconds(seconds) {
   if (isNaN(seconds) || seconds < 0) {
